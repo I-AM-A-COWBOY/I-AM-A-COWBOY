@@ -1,0 +1,227 @@
+<!DOCTYPE html>u
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I AM A COWBOY 🔥</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* Fond particules */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Animation flottante du titre */
+    #mainTitle {
+      animation: float 3s ease-in-out infinite;
+      text-align: center;
+      margin-top: 20px;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Lueurs selon rareté */
+    .glow-Commun { box-shadow: 0 0 20px grey; }
+    .glow-UnCommun { box-shadow: 0 0 20px darkgreen; }
+    .glow-Rare { box-shadow: 0 0 20px blue; }
+    .glow-Legendaire { box-shadow: 0 0 20px red; }
+    .glow-Mythique { box-shadow: 0 0 20px purple; }
+    .glow-Secret { box-shadow: 0 0 20px gold; }
+
+    .image-card {
+      display: inline-block;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .image-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+    }
+    .image-title {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .image-price {
+      text-align: center;
+      color: #00FF7F; /* vert clair */
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <h1 id="mainTitle">I AM A COWBOY 🔥</h1>
+
+  <div class="search-container">
+    <input type="text" placeholder="Recherche... 🔍" id="searchBar">
+  </div>
+
+  <div class="sort-buttons">
+    <button id="sortRarity">Trier par rareté</button>
+    <button id="sortPriceAsc">Prix croissant</button>
+    <button id="sortPriceDesc">Prix décroissant</button>
+  </div>
+
+  <div class="images-container">
+    <!-- Toutes les cartes -->
+    <div class="image-card glow-Commun" data-title="Noo" data-rarity="Commun" data-price="100" data-bonus="1$/s" data-img="oob.png">
+      <img src="nob.png" alt="Noob">
+      <div class="image-title">Noob</div>
+      <div class="image-price">100 💰</div>
+    </div>
+    <div class="image-card glow-Rare" data-title="Noob Boxeur" data-rarity="Rare" data-price="100000" data-bonus="700$/s" data-img="Boxeur.png">
+      <img src="Boxeur.png" alt="Noob Boxeur">
+      <div class="image-title">Noob Boxeur</div>
+      <div class="image-price">100 000 💰</div>
+    </div>
+    <div class="image-card glow-Rare" data-title="Noob Ninja" data-rarity="Rare" data-price="12000" data-bonus="95$/s" data-img="Ninja.PNG">
+      <img src="Ninja.PNG" alt="Noob Ninja">
+      <div class="image-title">Noob Ninja</div>
+      <div class="image-price">12 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Agent Noob" data-rarity="Commun" data-price="1" data-bonus="1$/s" data-img="Agent.PNG">
+      <img src="Agent.PNG" alt="Agent Noob">
+      <div class="image-title">Agent Noob</div>
+      <div class="image-price">1 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Sleeping Noob" data-rarity="Rare" data-price="24 000" data-bonus="190$/s" data-img="Sleeping.PNG">
+      <img src="Sleeping.PNG" alt="Sleeping Noob">
+      <div class="image-title">Sleeping Noob</div>
+      <div class="image-price">24 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Rich Noob" data-rarity="Rare" data-price="50 000" data-bonus="350$/s" data-img="Rich.PNG">
+      <img src="Rich.PNG" alt="Rich Noob">
+      <div class="image-title">Rich Noob</div>
+      <div class="image-price">50 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Teacher Noob" data-rarity="UnCommun" data-price="7" data-bonus="350$/s" data-img="Teacher.PNG">
+      <img src="Teacher.PNG" alt="Teacher Noob">
+      <div class="image-title">Teacher Noob</div>
+      <div class="image-price">800 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Buildeur Noob" data-rarity="UnCommun" data-price="6 000" data-bonus="50$/s" data-img="Buildeur.PNG">
+      <img src="Buildeur.PNG" alt="Buildeur Noob">
+      <div class="image-title">Buildeur Noob</div>
+      <div class="image-price">6 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Surf Noob" data-rarity="Commun" data-price="200" data-bonus="2$/s" data-img="Surf.PNG">
+      <img src="Surf.PNG" alt="Surf Noob">
+      <div class="image-title">Surf Noob</div>
+      <div class="image-price">200 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Poor Noob" data-rarity="Commun" data-price="400" data-bonus="4$/s" data-img="Poor.PNG">
+      <img src="Poor.PNG" alt="Poor Noob">
+      <div class="image-title">Poor Noob</div>
+      <div class="image-price">400 💰</div>
+    </div>
+    <div class="image-card glow-Legendaire" data-title="Hacker Noob" data-rarity="Legendaire" data-price="250 000" data-bonus="3 000$/s" data-img="hackeur.png">
+      <img src="hackeur.png" alt="Hacker Noob">
+      <div class="image-title">Hacker Noob</div>
+      <div class="image-price">250 000 💰</div>
+    </div>
+    <div class="image-card glow-Legendaire" data-title="King Noob" data-rarity="Legendaire" data-price="500 000" data-bonus="1500$/s" data-img="King.PNG">
+      <img src="King.PNG" alt="King Noob">
+      <div class="image-title">King Noob</div>
+      <div class="image-price">500 000 💰</div>
+    </div>
+    <div class="image-card glow-UnCommun" data-title="Magic Noob" data-rarity="UnCommun" data-price="1600" data-bonus="14$/s" data-img="magic noob.png">
+      <img src="magic noob.png" alt="Magic Noob">
+      <div class="image-title">Magic Noob</div>
+      <div class="image-price">1 600 💰</div>
+    </div>
+    <div class="image-card glow-Mythique" data-title="God Noob" data-rarity="Mythique" data-price="2500000" data-bonus="13 000$/s" data-img="God.PNG">
+      <img src="God.PNG" alt="God Noob">
+      <div class="image-title">God Noob</div>
+      <div class="image-price">2 500 000 💰</div>
+    </div>
+    <div class="image-card glow-UnCommun" data-title="Swat Noob" data-rarity="UnCommun" data-price="3200" data-bonus="28$/s" data-img="Swat.PNG">
+      <img src="Swat.PNG" alt="Swat Noob">
+      <div class="image-title">Swat Noob</div>
+      <div class="image-price">3 200 💰</div>
+    </div>
+    <div class="image-card glow-Secret" data-title="Solider Noob" data-rarity="Secret" data-price="12 000 000" data-bonus="60 000$/s" data-img="Solider.PNG">
+      <img src="Solider.PNG" alt="Solider Noob">
+      <div class="image-title">Solider Noob</div>
+      <div class="image-price">12  ︎ ︎000 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Demon Noob" data-rarity="Legendaire" data-price="1 000 000" data-bonus="6000$/s" data-img="Demon.PNG">
+      <img src="Demon.PNG" alt="Demon Noob">
+      <div class="image-title">Demon Noob</div>
+      <div class="image-price">1 000 000 💰</div>
+    </div>
+    <div class="image-card glow-Commun" data-title="Sayan Noob" data-rarity="Mythique" data-price="5 000 000" data-bonus="26 000$/s" data-img="Sayan.PNG">
+      <img src="Sayan.PNG" alt="Sayan Noob">
+      <div class="image-title">Sayan Noob</div>
+      <div class="image-price">5 000 000 💰</div>
+    </div>
+    <div class="image-card glow-Secret" data-title="Noob Creators" data-rarity="Secret" data-price="108 000 000" data-bonus="540 000$/s" data-img="Creators.PNG">
+      <img src="Creators.PNG" alt="Solider Noob">
+      <div class="image-title">Noob Creators</div>
+      <div class="image-price">108  ︎000 000 💰</div>
+    </div>
+   </div> 
+    
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <span id="popupClose">&times;</span>
+    <img id="popupImage" src="" alt="">
+    <h2 id="popupTitle"></h2>
+    <p id="popupRarity"></p>
+    <p id="priceText"></p>
+    <p id="popupBonus"></p>
+  </div>
+
+  <div class="footer">
+  Développé par Zaynox pour Steal a Noob de DarSya's Creations • © 2025 Steal A Noob
+    https://steal-a-noob.github.io/Steal-A-Noob-status-/
+</div>
+
+  <script src="script.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 100 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "move": { "enable": true, "speed": 2 }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
