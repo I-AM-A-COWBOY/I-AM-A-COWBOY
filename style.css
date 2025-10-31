@@ -1,5 +1,4 @@
-
-/* Reset général */
+/* ==== Reset & Body ==== */
 * {
   margin: 0;
   padding: 0;
@@ -8,163 +7,138 @@
 }
 
 body {
-  background: #111;
+  background: #000;
   color: #fff;
   overflow-x: hidden;
-  position: relative;
-  min-height: 100vh;
 }
 
-/* Particles.js */
+/* ==== Particles ==== */
 #particles-js {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: -1;
-  top: 0;
-  left: 0;
 }
 
-/* Titre principal */
+/* ==== Titre principal ==== */
 #mainTitle {
   text-align: center;
+  margin-top: 20px;
   font-size: 3rem;
-  margin: 20px 0;
-  color: #00BFFF;
-  text-shadow: 0 0 10px #f39c12;
+  font-weight: bold;
+  animation: float 3s ease-in-out infinite;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 
-/* Barre de recherche */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ==== Search & Sort ==== */
 .search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 20px 0;
 }
 
-#searchBar {
-  width: 300px;
-  padding: 10px 15px;
-  border-radius: 25px;
+.search-container input {
+  padding: 8px 12px;
+  border-radius: 10px;
   border: none;
-  font-size: 16px;
-  outline: none;
+  font-size: 1rem;
+  width: 200px;
 }
 
-/* Boutons de tri */
 .sort-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .sort-buttons button {
-  padding: 8px 15px;
+  margin: 0 5px;
+  padding: 8px 16px;
+  border-radius: 8px;
   border: none;
-  border-radius: 20px;
-  background: #3498db;
-  color: #fff;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.2s;
+  transition: transform 0.2s, background 0.3s;
 }
 
 .sort-buttons button:hover {
-  background: #2980b9;
+  transform: scale(1.05);
+  background: #444;
 }
 
-/* Container images */
+/* ==== Cartes ==== */
 .images-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  padding-bottom: 50px;
+  padding: 20px;
 }
 
-/* Cartes d'image */
 .image-card {
-  background: #222;
-  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
   border-radius: 15px;
-  width: 150px;
-  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  transition: 0.2s;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
 }
 
 .image-card img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 }
 
 .image-title {
-  font-weight: bold;
   margin-top: 5px;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .image-price {
-  margin-top: 3px;
-  color: #00FF7F; /* Prix sous les images en bleu clair */
+  margin-top: 2px;
+  color: #00FF7F;
+  font-weight: bold;
 }
 
-/* Glow selon rareté */
-.glow-Commun { box-shadow: 0 0 10px #2ecc71; } /* vert 💚 */
-.glow-Rare { box-shadow: 0 0 15px #3498db; } /* bleu 💙 */
-.glow-Uncommun { box-shadow: 0 0 15px #8e44ad; } /* violet 💜 */
-.glow-Legendaire { box-shadow: 0 0 20px #FFD700; } /* or 💛 */
-.glow-Mythique { box-shadow: 0 0 25px #ff66cc; } /* rose 💖 */
-.glow-Secret { box-shadow: 0 0 30px #7f8c8d; } /* gris 🩶 */
+/* ==== Glow par rareté ==== */
+.glow-Commun { box-shadow: 0 0 20px #2ecc71; }
+.glow-UnCommun { box-shadow: 0 0 20px #8e44ad; }
+.glow-Rare { box-shadow: 0 0 20px #3498db; }
+.glow-Legendaire { box-shadow: 0 0 20px #FFD700; }
+.glow-Mythique { box-shadow: 0 0 20px #ff66cc; }
+.glow-Secret { box-shadow: 0 0 20px #7f8c8d; }
 
-/* Hover animation synchronisée avec la rareté */
-.image-card:hover.glow-Commun {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px #2ecc71, 0 0 30px #2ecc71;
-  transition: 0.3s;
+/* Hover avec glow dynamique */
+.image-card:hover {
+  transform: scale(1.05);
 }
 
-.image-card:hover.glow-Rare {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #3498db, 0 0 40px #3498db;
-  transition: 0.3s;
-}
+.image-card:hover.glow-Commun { box-shadow: 0 0 15px #2ecc71, 0 0 30px #2ecc71; }
+.image-card:hover.glow-UnCommun { box-shadow: 0 0 20px #8e44ad, 0 0 40px #8e44ad; }
+.image-card:hover.glow-Rare { box-shadow: 0 0 20px #3498db, 0 0 40px #3498db; }
+.image-card:hover.glow-Legendaire { box-shadow: 0 0 25px #FFD700, 0 0 50px #FFD700; }
+.image-card:hover.glow-Mythique { box-shadow: 0 0 30px #ff66cc, 0 0 60px #ff66cc; }
+.image-card:hover.glow-Secret { box-shadow: 0 0 35px #7f8c8d, 0 0 70px #7f8c8d; }
 
-.image-card:hover.glow-Uncommun {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #8e44ad, 0 0 40px #8e44ad;
-  transition: 0.3s;
-}
-
-.image-card:hover.glow-Legendaire {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #FFD700, 0 0 50px #FFD700;
-  transition: 0.3s;
-}
-
-.image-card:hover.glow-Mythique {
-  transform: scale(1.08);
-  box-shadow: 0 0 30px #ff66cc, 0 0 60px #ff66cc;
-  transition: 0.3s;
-}
-
-.image-card:hover.glow-Secret {
-  transform: scale(1.08);
-  box-shadow: 0 0 35px #7f8c8d, 0 0 70px #7f8c8d;
-  transition: 0.3s;
-}
-
-/* Popup */
+/* ==== Popup ==== */
 .popup {
   display: none;
   position: fixed;
-  z-index: 999;
-  left: 50%;
-  top: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  background: #111;
+  background: rgba(0,0,0,0.9);
   padding: 20px;
   border-radius: 15px;
-  border: 2px solid #3498db;
+  box-shadow: 0 0 30px #fff;
+  z-index: 10;
   text-align: center;
   width: 300px;
 }
@@ -172,22 +146,36 @@ body {
 .popup img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 10px;
+}
+
+.popup h2 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.popup p {
+  margin: 3px 0;
 }
 
 #popupClose {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 5px; right: 10px;
+  font-size: 1.5rem;
   cursor: pointer;
-  font-size: 20px;
-  color: #e74c3c;
+  color: #fff;
 }
 
-/* Footer */
+/* ==== Footer ==== */
 .footer {
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-  color: #7f8c8d;
+  margin: 20px 0;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* ==== Media Queries ==== */
+@media (max-width: 600px) {
+  .image-card img { width: 100px; height: 100px; }
+  .image-card { padding: 4px; }
+  #mainTitle { font-size: 2rem; }
 }
