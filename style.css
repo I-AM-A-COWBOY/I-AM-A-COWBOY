@@ -119,7 +119,7 @@ body {
 /* Hover animation synchronisée avec la rareté */
 .image-card:hover.glow-Commun {
   transform: scale(1.08);
-  box-shadow: 0 0 15px #95a5a6, 0 0 30px #95a5a6;
+  box-shadow: 0 0 15px #2ecc71, 0 0 30px #2ecc71;
   transition: 0.3s;
 }
 
@@ -137,19 +137,19 @@ body {
 
 .image-card:hover.glow-Legendaire {
   transform: scale(1.08);
-  box-shadow: 0 0 25px #e74c3c, 0 0 50px #e74c3c;
+  box-shadow: 0 0 25px #FFD700, 0 0 50px #FFD700;
   transition: 0.3s;
 }
 
 .image-card:hover.glow-Mythique {
   transform: scale(1.08);
-  box-shadow: 0 0 30px #f39c12, 0 0 60px #f39c12;
+  box-shadow: 0 0 30px #ff66cc, 0 0 60px #ff66cc;
   transition: 0.3s;
 }
 
 .image-card:hover.glow-Secret {
   transform: scale(1.08);
-  box-shadow: 0 0 35px #2ecc71, 0 0 70px #2ecc71;
+  box-shadow: 0 0 35px #7f8c8d, 0 0 70px #7f8c8d;
   transition: 0.3s;
 }
 
