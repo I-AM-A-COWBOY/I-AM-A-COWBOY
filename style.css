@@ -109,9 +109,9 @@ body {
 }
 
 /* Glow selon rareté */
-.glow-Commun { box-shadow: 0 0 10px #95a5a6; } /* gris clair */
-.glow-Rare { box-shadow: 0 0 15px #3498db; } /* bleu */
-.glow-Uncommun { box-shadow: 0 0 15px #8e44ad; } /* violet */
+.glow-Commun { box-shadow: 0 0 10px #2ecc71; } /* vert 💚 */
+.glow-Rare { box-shadow: 0 0 15px #3498db; } /* bleu 💙 */
+.glow-Uncommun { box-shadow: 0 0 15px #8e44ad; } /* violet 💜 */
 .glow-Legendaire { box-shadow: 0 0 20px #FFD700; } /* or 💛 */
 .glow-Mythique { box-shadow: 0 0 25px #ff66cc; } /* rose 💖 */
 .glow-Secret { box-shadow: 0 0 30px #7f8c8d; } /* gris 🩶 */
