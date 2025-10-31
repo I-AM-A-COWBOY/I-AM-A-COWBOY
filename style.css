@@ -15,8 +15,10 @@ body {
 /* ==== Particles ==== */
 #particles-js {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -88,12 +90,14 @@ body {
   cursor: pointer;
   text-align: center;
   background: rgba(0,0,0,0.4);
+  overflow: hidden;
 }
 
 .image-card img {
   width: 150px;
   height: 150px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .image-title {
@@ -146,6 +150,7 @@ body {
 .popup img {
   width: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .popup h2 {
