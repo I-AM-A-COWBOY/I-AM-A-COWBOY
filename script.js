@@ -29,12 +29,12 @@ const popupBonus = document.getElementById('popupBonus');
 
 // Couleurs selon rareté
 const rarityColors = {
-  'Commun': 'grey',
-  'UnCommun': 'darkgreen',
-  'Rare': 'blue',
-  'Legendaire': 'red',
-  'Mythique': 'purple',
-  'Secret': 'gold'
+  'Commun': 'green',        // 💚 vert
+  'UnCommun': 'purple',     // 💜 violet
+  'Rare': 'blue',           // 💙 bleu
+  'Legendaire': 'gold',     // 💛 or
+  'Mythique': 'hotpink',    // 💖 rose
+  'Secret': 'grey'          // 🩶 gris
 };
 
 // --- Recherche ---
