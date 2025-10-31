@@ -12,9 +12,9 @@ particlesJS("particles-js", {
         "value_area": 1500
       }
     },
-    "color": {
-      "value": ["#808080", "#006400", "#0000FF", "#FF0000", "#800080"] 
-      // gris, vert foncé, bleu, rouge, violet
+"color": {
+  "value": ["#2ecc71", "#8e44ad", "#3498db", "#FFD700", "#ff66cc", "#7f8c8d"]
+}
     },
     "shape": {
       "type": "circle"
