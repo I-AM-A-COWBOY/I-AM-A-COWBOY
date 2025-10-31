@@ -1,1 +1,193 @@
 
+/* Reset général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Particles.js */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* Titre principal */
+#mainTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+  color: #00BFFF;
+  text-shadow: 0 0 10px #f39c12;
+}
+
+/* Barre de recherche */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#searchBar {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Boutons de tri */
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.sort-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.sort-buttons button:hover {
+  background: #2980b9;
+}
+
+/* Container images */
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 50px;
+}
+
+/* Cartes d'image */
+.image-card {
+  background: #222;
+  padding: 10px;
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image-title {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.image-price {
+  margin-top: 3px;
+  color: #00FF7F; /* Prix sous les images en bleu clair */
+}
+
+/* Glow selon rareté */
+.glow-Commun { box-shadow: 0 0 10px #95a5a6; }
+.glow-Rare { box-shadow: 0 0 15px #3498db; }
+.glow-Uncommun { box-shadow: 0 0 15px #8e44ad; }
+.glow-Legendaire { box-shadow: 0 0 20px #e74c3c; }
+.glow-Mythique { box-shadow: 0 0 25px #f39c12; }
+.glow-Secret { box-shadow: 0 0 30px #2ecc71; }
+
+/* Hover animation synchronisée avec la rareté */
+.image-card:hover.glow-Commun {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #95a5a6, 0 0 30px #95a5a6;
+  transition: 0.3s;
+}
+
+.image-card:hover.glow-Rare {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #3498db, 0 0 40px #3498db;
+  transition: 0.3s;
+}
+
+.image-card:hover.glow-Uncommun {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #8e44ad, 0 0 40px #8e44ad;
+  transition: 0.3s;
+}
+
+.image-card:hover.glow-Legendaire {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #e74c3c, 0 0 50px #e74c3c;
+  transition: 0.3s;
+}
+
+.image-card:hover.glow-Mythique {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #f39c12, 0 0 60px #f39c12;
+  transition: 0.3s;
+}
+
+.image-card:hover.glow-Secret {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px #2ecc71, 0 0 70px #2ecc71;
+  transition: 0.3s;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #3498db;
+  text-align: center;
+  width: 300px;
+}
+
+.popup img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#popupClose {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #e74c3c;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  color: #7f8c8d;
+}
