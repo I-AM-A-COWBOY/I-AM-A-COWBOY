@@ -62,10 +62,10 @@ function sortCards(compareFn) {
 }
 
 // ========================================
-// TRIER PAR RARETÉ
+// TRIER PAR RARETÉ (SECRET → MYTHIQUE → LEGENDAIRE → RARE → UNCOMMUN → COMMUN)
 // ========================================
 sortRarity.addEventListener('click', () => {
-  const rarityOrder = ['Commun', 'UnCommun', 'Rare', 'Legendaire', 'Mythique', 'Secret'];
+  const rarityOrder = ['Secret', 'Mythique', 'Legendaire', 'Rare', 'UnCommun', 'Commun'];
   sortCards((a, b) => rarityOrder.indexOf(a.dataset.rarity) - rarityOrder.indexOf(b.dataset.rarity));
 });
 
